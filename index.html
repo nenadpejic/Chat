@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Chat | Nenad Pejic</title>
+</head>
+
+<body>
+  <div class="page-container">
+    <header class="col-d-12">
+      <h1>ITBootcamp Chat</h1>
+      <p>Choose a chatroom</p>
+    </header>
+
+    <nav class="col-d-12">
+      <div class="col-d-8">
+        <ul class="overflow">
+          <li class="col-d-3">
+            <input type="button" value="# general" class="radio">
+          </li>
+          <li class="col-d-3">
+            <input type="button" value="# js" class="radio">
+          </li>
+          <li class="col-d-3">
+            <input type="button" value="# homeworks" class="radio">
+          </li>
+          <li class="col-d-3">
+            <input type="button" value="# tests" class="radio">
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="col-d-12">
+      <div class="col-d-8">
+        <section id="chat">
+          <ul id="ul"></ul>
+        </section>
+
+        <section id="input" class="overflow">
+          <!-- color -->
+          <div class="col-d-12 pb-1">
+            <div class="col-m-9 col-d-8">
+              <input class="input" type="color" id="color">
+            </div>
+            <div class="col-m-3 col-d-4 pl-1">
+              <input class="btn" type="button" value="Update color" id="updateColor">
+            </div>
+          </div>
+          <!-- date -->
+          <div class="col-d-12 pb-1">
+            <div class="col-m-9 col-d-8">
+              <div class="col-m-6 col-d-6">
+                <input class="input" type="datetime-local" id="datetimeLocalStart">
+              </div>
+              <div class="col-m-6 col-d-6">
+                <input class="input" type="datetime-local" id="datetimeLocalEnd">
+              </div>
+            </div>
+            <div class="col-m-3 col-d-4 pl-1">
+              <input class="btn" type="button" value="Set dates" id="setDates">
+            </div>
+          </div>
+
+          <div class="col-d-12 pb-1">
+            <div class="col-m-9 col-d-8">
+              <textarea class="input" id="message" placeholder="Text message" cols="1" rows="1"></textarea>
+            </div>
+            <div class="col-m-3 col-d-4 pl-1">
+              <input class="btn" type="button" value="Send" id="send">
+            </div>
+          </div>
+
+          <div class="col-d-12 pb-1">
+            <div class="col-m-9 col-d-8">
+              <input class="input" type="text" name="" id="username" placeholder="Update username">
+            </div>
+            <div class="col-m-3 col-d-4 pl-1">
+              <input class="btn" type="button" value="Update" id="update">
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; Created by Nenad Pejic</p>
+    </footer>
+  </div>
+
+  <div id="notification"></div>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyByyFJa2CxUQiNmGnC-lYuzrJcqTkzSjkw",
+      authDomain: "project-chat-326ac.firebaseapp.com",
+      databaseURL: "https://project-chat-326ac.firebaseio.com",
+      projectId: "project-chat-326ac",
+      storageBucket: "project-chat-326ac.appspot.com",
+      messagingSenderId: "760832315122",
+      appId: "1:760832315122:web:2292ca2fd9c932eb620a6b"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    let db = firebase.firestore();
+  </script>
+
+  <script type="module" src="./app.js"></script>
+</body>
+
+</html>
