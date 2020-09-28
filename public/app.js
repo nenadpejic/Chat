@@ -154,7 +154,7 @@ btnUpdateColor.addEventListener("click", function (event) {
 
   localStorage.setItem("color", color);
   setTimeout(() => {
-    document.body.style.backgroundColor = color;
+    sectionChat.style.backgroundColor = color;
   }, 500);
 });
 
