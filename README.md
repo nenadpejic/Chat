@@ -23,6 +23,7 @@ Code is [here](https://github.com/nenadpejic/public-chat)
 - Set the background color
 - Filter chat messages by date
 - Update your username
+- Notifications
 - NoSQL database
 - Local storage
 
