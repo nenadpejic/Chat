@@ -1,4 +1,4 @@
-# public-chat
+# Public Chat
 
 Public Chat is a chat app that lets you exchange messages with other users in four different channels. You can set the background color, filter chat messages by date, send and delete messages and update your username.
 
